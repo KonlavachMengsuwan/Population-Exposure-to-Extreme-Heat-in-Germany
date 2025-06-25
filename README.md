@@ -1,5 +1,7 @@
 # Population Exposure to Extreme Heat in Germany on 13 August 2024 using MODIS LST and WorldPop Data
 
+![image](https://github.com/user-attachments/assets/1b24a329-19e3-42c5-b4bb-612426961210)
+
 ---
 
 ### 🎓 Introduction
@@ -82,6 +84,8 @@ Export.image.toDrive({
 ---
 
 ### 🔻 Plot: MODIS LST (13 August 2024)
+![image](https://github.com/user-attachments/assets/12890c01-db5c-45fb-87e2-2b96a87f76ec)
+![image](https://github.com/user-attachments/assets/298ef2de-a05d-4339-9d81-fc696bcdf8b8)
 
 * Source: MODIS MOD11A1 (daily)
 * Resolution: 1 km
@@ -92,6 +96,8 @@ Export.image.toDrive({
 ---
 
 ### 🔻 Plot: Exposed Population (LST > 35 °C)
+![image](https://github.com/user-attachments/assets/ac55fe55-fbf5-4281-aad2-8d55886fae5b)
+![image](https://github.com/user-attachments/assets/63845ab6-359d-4fe6-a3f4-1f005fd45a50)
 
 * Computed by masking WorldPop where LST > 35 °C
 * Units: People per pixel
@@ -100,19 +106,7 @@ Export.image.toDrive({
 
 ---
 
-### 🔹 Clarification of Temperature Data
-
-| Dataset       | Source       | Variable        | Resolution | Unit                       | Temporal Coverage             |
-| ------------- | ------------ | --------------- | ---------- | -------------------------- | ----------------------------- |
-| MODIS MOD11A1 | NASA LP DAAC | LST\_Day\_1km   | 1 km       | °C (converted from Kelvin) | Daily (Terra, daytime)        |
-| MODIS MYD11A1 | NASA LP DAAC | LST\_Day\_1km   | 1 km       | °C                         | Daily (Aqua, daytime)         |
-| MODIS MOD11A2 | NASA LP DAAC | LST\_Day\_1km   | 1 km       | °C                         | 8-day composite               |
-| Landsat ST    | USGS         | ST\_B10         | 30–100 m   | °C                         | 16-day revisit, cloud-limited |
-| ERA5-Land     | ECMWF        | temperature\_2m | \~10 km    | °C                         | Hourly, daily                 |
-
----
-
-### 🔹 Clarification of Population Dataset
+### 🔹 Comparison of Available Population Datasets
 
 | Dataset          | Source                    | Country          | Resolution | Unit                | Description                                     |
 | ---------------- | ------------------------- | ---------------- | ---------- | ------------------- | ----------------------------------------------- |
@@ -123,7 +117,7 @@ Export.image.toDrive({
 
 ---
 
-### 🔹 Clarification of LST Dataset
+### 🔹 Comparison of Available Land Surface Temperature (LST) Datasets
 
 | Dataset          | Source       | Resolution | Temporal      | Units           | Notes                                      |
 | ---------------- | ------------ | ---------- | ------------- | --------------- | ------------------------------------------ |
