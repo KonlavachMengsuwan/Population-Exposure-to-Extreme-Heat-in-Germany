@@ -131,6 +131,9 @@ Export.image.toDrive({
 
 ---
 
+GEE Code: https://code.earthengine.google.com/703393145e707d2500145c0588d40101
+GEE Code: [Germany LST with MODIS and Landsat] https://code.earthengine.google.com/ec4671a3449c9c4ef37e615b0442c4b2
+
 ### 🌍 License and Credits
 
 * MODIS: NASA LP DAAC
