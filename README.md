@@ -75,6 +75,8 @@ Export.image.toDrive({
 ---
 
 ### 🔻 Plot: Population Density (WorldPop 2020)
+![image](https://github.com/user-attachments/assets/dad3825d-2776-478f-9f18-513fb622be4c)
+![image](https://github.com/user-attachments/assets/f788aa01-e089-498f-ab12-4e85880767a7)
 
 * Source: \[WorldPop/GP/100m/pop/DEU\_2020]
 * Resolution: 100 m
