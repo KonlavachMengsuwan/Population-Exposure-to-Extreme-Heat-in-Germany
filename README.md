@@ -1,4 +1,4 @@
-# Title: Population Exposure to Extreme Heat in Germany on 13 August 2024 using MODIS LST and WorldPop Data**
+# Population Exposure to Extreme Heat in Germany on 13 August 2024 using MODIS LST and WorldPop Data**
 
 ---
 
