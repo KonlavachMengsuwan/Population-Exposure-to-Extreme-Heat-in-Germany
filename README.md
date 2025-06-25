@@ -102,29 +102,36 @@ Export.image.toDrive({
 
 ### 🔹 Clarification of Temperature Data
 
-* **LST Source:** MODIS Terra (MOD11A1)
-* **Date:** 13 August 2024
-* **Unit Conversion:** MODIS LST in Kelvin, scaled (multiply by 0.02, subtract 273.15)
-* **Threshold used:** 35 °C (daytime land surface temperature)
+| Dataset       | Source       | Variable        | Resolution | Unit                       | Temporal Coverage             |
+| ------------- | ------------ | --------------- | ---------- | -------------------------- | ----------------------------- |
+| MODIS MOD11A1 | NASA LP DAAC | LST\_Day\_1km   | 1 km       | °C (converted from Kelvin) | Daily (Terra, daytime)        |
+| MODIS MYD11A1 | NASA LP DAAC | LST\_Day\_1km   | 1 km       | °C                         | Daily (Aqua, daytime)         |
+| MODIS MOD11A2 | NASA LP DAAC | LST\_Day\_1km   | 1 km       | °C                         | 8-day composite               |
+| Landsat ST    | USGS         | ST\_B10         | 30–100 m   | °C                         | 16-day revisit, cloud-limited |
+| ERA5-Land     | ECMWF        | temperature\_2m | \~10 km    | °C                         | Hourly, daily                 |
 
 ---
 
 ### 🔹 Clarification of Population Dataset
 
-* **Source:** WorldPop 2020 (Germany)
-* **Layer:** `WorldPop/GP/100m/pop/DEU_2020`
-* **Resolution:** 100 meters
-* **Value:** Estimated people per pixel
+| Dataset          | Source                    | Country          | Resolution | Unit                | Description                                     |
+| ---------------- | ------------------------- | ---------------- | ---------- | ------------------- | ----------------------------------------------- |
+| WorldPop GP 100m | University of Southampton | Germany          | 100 m      | People/pixel        | Gridded population estimates for 2020           |
+| GPWv4            | CIESIN (SEDAC)            | Global           | \~1 km     | People/pixel        | Census-based distribution with minimal modeling |
+| LandScan         | Oak Ridge National Lab    | Global           | \~1 km     | People/pixel        | Ambient population (day/night average)          |
+| HRSL             | Meta / Facebook           | Country-specific | \~30 m     | People per building | ML-based building detection + census            |
 
 ---
 
 ### 🔹 Clarification of LST Dataset
 
-* **Source:** MODIS MOD11A1 v6.1
-* **Layer:** `LST_Day_1km`
-* **Resolution:** 1 km
-* **Temporal Coverage:** Daily
-* **Acquisition Date:** 13 August 2024
+| Dataset          | Source       | Resolution | Temporal      | Units           | Notes                                      |
+| ---------------- | ------------ | ---------- | ------------- | --------------- | ------------------------------------------ |
+| MODIS MOD11A1    | NASA LP DAAC | 1 km       | Daily         | Kelvin (scaled) | Terra, daytime overpass                    |
+| MODIS MYD11A1    | NASA LP DAAC | 1 km       | Daily         | Kelvin (scaled) | Aqua, daytime overpass                     |
+| MOD11A2          | NASA LP DAAC | 1 km       | 8-day average | Kelvin          | More stable, lower noise                   |
+| Landsat 8/9 LST  | USGS         | 30–100 m   | \~16 days     | Kelvin          | Higher spatial detail, limited by clouds   |
+| Sentinel-3 SLSTR | ESA          | 1 km       | 1–2 days      | Kelvin          | High temporal frequency, dual-view sensors |
 
 ---
 
